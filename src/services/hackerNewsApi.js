@@ -1,5 +1,5 @@
-import axios from 'axios';
-import { selectFields } from '../utils/selectFields';
+import axios from 'axios'
+import { selectFields } from '../utils/selectFields'
 
 export const baseUrl = 'https://hacker-news.firebaseio.com/v0/'
 export const newStoriesUrl = `${baseUrl}newstories.json`
@@ -10,6 +10,7 @@ export const getStory = async (storyId) => {
     .get(`${storyUrl}${storyId}.json`)
     .then(({ data }) => data && selectFields(data))
 
+  console.log(result)
   return result
 }
 
