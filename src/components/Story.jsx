@@ -1,8 +1,8 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, memo } from 'react'
 import { getStory } from '../services/hackerNewsApi'
 import { timeSince } from '../utils/timeSince'
 
-export const Story = ({ storyId, index }) => {
+export const Story = memo(({ storyId, index }) => {
   const [story, setStory] = useState('')
 
   useEffect(() => {
@@ -18,4 +18,4 @@ export const Story = ({ storyId, index }) => {
       <p>posted {timeSince(story.time)} ago</p>
     </>
   ) : null
-}
+})
