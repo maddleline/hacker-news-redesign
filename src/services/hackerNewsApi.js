@@ -10,7 +10,6 @@ export const getStory = async (storyId) => {
     .get(`${storyUrl}${storyId}.json`)
     .then(({ data }) => data && selectFields(data))
 
-  console.log(result)
   return result
 }
 
