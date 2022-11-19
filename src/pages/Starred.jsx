@@ -1,11 +1,11 @@
 import React from 'react'
-import StoriesContainer from '../containers/StoriesContainer'
+import StarredStoriesContainer from '../containers/StarredStoriesContainer'
 
 const Starred = () => {
   return (
     <div className='Starred'>
       <h2>Starred</h2>
-      <StoriesContainer />
+      <StarredStoriesContainer />
     </div>
   )
 }
