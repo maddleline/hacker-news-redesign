@@ -1,13 +1,13 @@
 import { configureStore, createSlice } from '@reduxjs/toolkit'
 
-const songsSlice = createSlice({
-  name: 'song',
+const starredStoriesSlice = createSlice({
+  name: 'starredStory',
   initialState: [],
   reducers: {
-    addSong(state, action) {
+    addStarredStory(state, action) {
       state.push(action.payload)
     },
-    removeSong(state, action) {
+    removeStarredStory(state, action) {
       const index = state.indexOf(action.payload)
       state.splice(index, 1)
     }
@@ -16,9 +16,10 @@ const songsSlice = createSlice({
 
 const store = configureStore({
   reducer: {
-    songs: songsSlice.reducer
+    starredStories: starredStoriesSlice.reducer
   }
 })
 
 export { store }
-export const { addSong, removeSong } = songsSlice.actions
+export const { addStarredStory, removeStarredStory } =
+  starredStoriesSlice.actions

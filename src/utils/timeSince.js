@@ -1,10 +1,10 @@
 /*
-* timeSince function from Stack Overflow:
-* https://stackoverflow.com/a/3177838/8545523
-* takes in a timestamp and returns a string describing
-* the time since that timestamp in the most appropriate
-* format
-*/
+ * timeSince function from Stack Overflow:
+ * https://stackoverflow.com/a/3177838/8545523
+ * takes in a timestamp and returns a string describing
+ * the time since that timestamp in the most appropriate
+ * format
+ */
 export const timeSince = (timestamp) => {
   const seconds = Math.floor((new Date() - timestamp) / 1000)
   let interval = seconds / 31536000

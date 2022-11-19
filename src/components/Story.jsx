@@ -2,24 +2,24 @@ import { useEffect, useState, memo } from 'react'
 import { getStory } from '../services/hackerNewsApi'
 import { timeSince } from '../utils/timeSince'
 import { useDispatch } from 'react-redux'
-import { addSong, removeSong } from '../store/'
+import { addStarredStory, removeStarredStory } from '../store/'
 
 export const Story = memo(({ storyId, index }) => {
   const [story, setStory] = useState('')
 
   const dispatch = useDispatch()
 
-  const handleSongAdd = (song) => {
-    dispatch(addSong(song))
+  const handleStarredStoryAdd = (starredStory) => {
+    dispatch(addStarredStory(starredStory))
   }
 
-  const handleSongRemove = (song) => {
-    dispatch(removeSong(song))
+  const handleStarredStoryRemove = (starredStory) => {
+    dispatch(removeStarredStory(starredStory))
   }
 
   useEffect(() => {
     getStory(storyId).then((res) => res && setStory(res))
-  }, [])
+  }, [storyId])
 
   return story ? (
     <>
@@ -28,8 +28,8 @@ export const Story = memo(({ storyId, index }) => {
       <a href={story.url}>{story.title}</a>
       <p>by {story.by}</p>
       <p>posted {timeSince(story.time)} ago</p>
-      <button onClick={() => handleSongAdd(storyId)}>Add</button>
-      <button onClick={() => handleSongRemove(storyId)}>Remove</button>
+      <button onClick={() => handleStarredStoryAdd(storyId)}>Add</button>
+      <button onClick={() => handleStarredStoryRemove(storyId)}>Remove</button>
     </>
   ) : null
 })
