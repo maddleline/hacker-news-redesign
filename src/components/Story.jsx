@@ -53,24 +53,27 @@ export const Story = memo(({ storyId, index }) => {
     return string
   }
 
+  const getStarText = () => {
+    return starredStories.includes(storyId) ? 'starred' : 'star'
+  }
+
   return story ? (
-    <>
-      <a
-        href={story.url}
-        target='_blank'
-        rel='noopener noreferrer'
-        className='article'
-      >
+    <div className='article'>
+      <a href={story.url} target='_blank' rel='noopener noreferrer'>
         <span className='article__number'>{index + 1}.</span>
         <div className='article__title'>{story.title}</div>
         {story.url && <span className='article__source'>({getDomain()})</span>}
       </a>
       <div className='article__metadata'>
-        <p>{`284 points by ${story.by} posted ${timeSince(
-          story.time
-        )} ago | ${getCommentString()} |`}</p>
-        <button onClick={() => handleStarClick()}>Add/Remove</button>
+        <p>
+          {`284 points by ${story.by} posted ${timeSince(
+            story.time
+          )} ago | ${getCommentString()} | `}
+          <span className='article__star' onClick={() => handleStarClick()}>
+            {getStarText()}
+          </span>
+        </p>
       </div>
-    </>
+    </div>
   ) : null
 })

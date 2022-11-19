@@ -1,4 +1,4 @@
-.article {
+.article a {
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -25,7 +25,8 @@
     margin: 0px 12px;
 }
 
-.article__source {
+.article__source,
+.article__metadata {
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
@@ -36,4 +37,9 @@
 
 .article__metadata {
     display: flex;
+    align-items: center;
+}
+
+.article__star {
+    cursor: pointer;
 }
