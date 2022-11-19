@@ -24,11 +24,12 @@ export const Story = memo(({ storyId, index }) => {
 
   return story ? (
     <>
-      {index + 1}
-      {'.   '}
-      <a className='article__title' href={story.url}>
-        {story.title}
-      </a>
+      <div className='article'>
+        <span className='article__number'>{index + 1}.</span>
+        <a className='article__title' href={story.url}>
+          {story.title}
+        </a>
+      </div>
       <p>by {story.by}</p>
       <p>posted {timeSince(story.time)} ago</p>
       <button onClick={() => handleStarredStoryAdd(storyId)}>Add</button>

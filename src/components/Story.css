@@ -1,5 +1,19 @@
+.article {
+    display: flex;
+}
+.article__number {
+    font-family: 'Ubuntu Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 18px;
+    color: rgba(0, 0, 0, 0.5);
+    margin-right: 10px;
+
+}
 .article__title {
-    font-family: "Ubuntu Mono", sans-serif;
+    font-family: "Ubuntu Mono";
+    font-weight: 700;
     font-size: 18px;
     line-height: 18px;
     letter-spacing: 0em;
