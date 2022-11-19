@@ -1,6 +1,9 @@
 .article {
     display: flex;
+    align-items: center;
+    text-decoration: none;
 }
+
 .article__number {
     font-family: 'Ubuntu Mono';
     font-style: normal;
@@ -8,9 +11,9 @@
     font-size: 18px;
     line-height: 18px;
     color: rgba(0, 0, 0, 0.5);
-    margin-right: 10px;
 
 }
+
 .article__title {
     font-family: "Ubuntu Mono";
     font-weight: 700;
@@ -19,5 +22,18 @@
     letter-spacing: 0em;
     text-align: left;
     color: black;
-    text-decoration: none;
+    margin: 0px 12px;
+}
+
+.article__source {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.article__metadata {
+    display: flex;
 }
