@@ -4,6 +4,7 @@ import App from './App'
 import { Provider } from 'react-redux'
 import { store } from './store'
 import reportWebVitals from './reportWebVitals'
+import '@fontsource/ubuntu-mono/700.css' // Weight 700
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
