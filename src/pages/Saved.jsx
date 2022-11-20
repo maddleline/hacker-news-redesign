@@ -1,10 +1,17 @@
-import React from 'react'
-import SavedStoriesContainer from '../containers/SavedStoriesContainer'
+import StoriesContainer from '../containers/StoriesContainer'
+import { useSelector } from 'react-redux'
 
 const Saved = () => {
+  const savedStories = useSelector((state) => {
+    return state.savedStories
+  })
+
   return (
     <div className='Saved'>
-      <SavedStoriesContainer />
+      <StoriesContainer
+        storyIds={savedStories}
+        numStories={savedStories.length}
+      />
     </div>
   )
 }

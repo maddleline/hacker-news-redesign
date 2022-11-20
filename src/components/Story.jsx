@@ -40,17 +40,13 @@ export const Story = memo(({ storyId, index }) => {
   }
 
   const getCommentString = () => {
-    let string = '0 comments'
+    const comments = story.kids ?? []
+    return comments.length === 1 ? '1 comment' : `${comments.length} comments`
+  }
 
-    if (story.kids) {
-      if (story.kids.length === 1) {
-        string = `1 comment`
-      } else {
-        string = `${story.kids.length} comments`
-      }
-    }
-
-    return string
+  const getPointsText = () => {
+    const points = story.score ?? 0
+    return points === 1 ? '1 point' : `${story.points} points`
   }
 
   const getSaveText = () => {
@@ -65,9 +61,8 @@ export const Story = memo(({ storyId, index }) => {
         {story.url && <div className='article__source'>({getDomain()})</div>}
       </a>
       <div className='article__metadata'>
-        {`284 points by ${story.by} posted ${timeSince(
-          story.time
-        )} ago | ${getCommentString()} | `}
+        {`${getPointsText()} by ${story.by} posted ${timeSince(story.time)} ago
+        | ${getCommentString()} | `}
         <div
           className={`article__save ${getSaveText()}`}
           onClick={() => handleSaveClick()}
