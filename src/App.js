@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Latest from './pages/Latest.jsx'
 import Layout from './pages/Layout.jsx'
-import Starred from './pages/Starred.jsx'
+import Saved from './pages/Saved.jsx'
 
 const App = () => {
   return (
@@ -12,7 +12,7 @@ const App = () => {
         <Routes>
           <Route path='/' element={<Layout />}>
             <Route index element={<Latest />} />
-            <Route path='starred' element={<Starred />} />
+            <Route path='saved' element={<Saved />} />
           </Route>
         </Routes>
       </BrowserRouter>
