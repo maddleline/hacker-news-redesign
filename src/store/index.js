@@ -31,8 +31,6 @@ const store = configureStore({
   }
 })
 
-console.log(store.getState())
-
 export { store }
 export const { addSavedStory, removeSavedStory } = savedStoriesSlice.actions
 export const { toggleDarkMode } = darkModeSlice.actions
