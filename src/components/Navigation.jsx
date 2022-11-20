@@ -3,7 +3,7 @@ import './Navigation.scss'
 
 const Navigation = () => {
   return (
-    <nav className='my-nav'>
+    <nav>
       <NavLink to='/'>latest</NavLink>
       {` | `}
       <NavLink to='/saved'>saved</NavLink>

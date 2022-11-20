@@ -1,6 +1,6 @@
 @use 'src/font-styles.scss';
 
-.my-nav {
+nav {
   @include font-styles.open-sans-subheader;
 
   a {
