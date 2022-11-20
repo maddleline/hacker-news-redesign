@@ -1,4 +1,4 @@
-import './ShowMoreButton.css'
+import './ShowMoreButton.scss'
 
 const ShowMoreButton = ({ incrementPageNumber }) => {
   return (

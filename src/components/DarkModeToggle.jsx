@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux'
 import { toggleDarkMode } from '../store'
-import './DarkModeToggle.css'
+import './DarkModeToggle.scss'
 
 const DarkModeToggle = () => {
   const dispatch = useDispatch()

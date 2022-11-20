@@ -3,7 +3,7 @@ import { getStory } from '../services/hackerNewsApi'
 import { timeSince } from '../utils/timeSince'
 import { useDispatch, useSelector } from 'react-redux'
 import { addSavedStory, removeSavedStory } from '../store/'
-import './Story.css'
+import './Story.scss'
 
 export const Story = memo(({ storyId, index }) => {
   const [story, setStory] = useState('')
