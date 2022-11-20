@@ -1,0 +1,27 @@
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.header h1 {
+  margin-right: 2rem;
+}
+
+.header nav {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: black;
+}
+
+.header nav a {
+  text-decoration: none;
+  color: black;
+}
+
+.header nav a.active {
+  color: #fe7139;
+  font-weight: 800;
+}

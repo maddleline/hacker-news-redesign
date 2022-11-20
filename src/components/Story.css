@@ -60,7 +60,7 @@
   margin: 0px 3px;
 }
 
+.article__save:hover span,
 .article__save.saved span {
   color: #fe7139;
-  margin: 0px 3px;
 }

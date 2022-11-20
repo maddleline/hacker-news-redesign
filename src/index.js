@@ -8,7 +8,8 @@ import reportWebVitals from './reportWebVitals'
 // fonts
 import '@fontsource/ubuntu-mono/400.css'
 import '@fontsource/ubuntu-mono/700.css'
-import '@fontsource/open-sans'
+import '@fontsource/open-sans/400.css'
+import '@fontsource/open-sans/800.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
