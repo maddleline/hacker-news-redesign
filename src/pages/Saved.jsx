@@ -1,10 +1,20 @@
-import React from 'react'
-import SavedStoriesContainer from '../containers/SavedStoriesContainer'
+import { useState } from 'react'
+import StoriesContainer from '../containers/StoriesContainer'
+import { useSelector } from 'react-redux'
 
 const Saved = () => {
+  const [pageNumber, setPageNumber] = useState(1)
+  const savedStories = useSelector((state) => {
+    return state.savedStories
+  })
+
   return (
     <div className='Saved'>
-      <SavedStoriesContainer />
+      <StoriesContainer
+        storyIds={savedStories}
+        pageNumber={pageNumber}
+        setPageNumber={setPageNumber}
+      />
     </div>
   )
 }
