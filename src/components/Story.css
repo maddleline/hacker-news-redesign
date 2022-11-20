@@ -1,3 +1,8 @@
+.article {
+  position: relative;
+  margin-left: 29px;
+}
+
 .article a {
   display: flex;
   align-items: center;
@@ -6,6 +11,9 @@
 }
 
 .article__number {
+  position: absolute;
+  top: 0;
+  left: -30px;
   font-family: 'Ubuntu Mono';
   font-style: normal;
   font-weight: 400;
@@ -22,7 +30,7 @@
   letter-spacing: 0em;
   text-align: left;
   color: black;
-  margin: 0px 12px;
+  margin-right: 12px;
 }
 
 .article__source,
