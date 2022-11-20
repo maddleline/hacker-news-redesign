@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Latest from './pages/Latest.jsx'
 import Layout from './pages/Layout.jsx'
 import Saved from './pages/Saved.jsx'
+import './App.scss'
 
 const App = () => {
   return (

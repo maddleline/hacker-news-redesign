@@ -1,15 +1,11 @@
-@use 'src/font-styles.scss';
+@use 'src/styles/font-styles.scss';
+@use 'src/styles/colors.scss';
 
 nav {
   @include font-styles.open-sans-subheader;
 
-  a {
-    text-decoration: none;
-    color: black;
-
-    &.active {
-      color: #fe7139;
-      font-weight: 800;
-    }
+  a.active {
+    color: colors.$active;
+    font-weight: 800;
   }
 }
