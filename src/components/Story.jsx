@@ -55,7 +55,12 @@ export const Story = memo(({ storyId, index }) => {
 
   return story ? (
     <div className='article'>
-      <a href={story.url} target='_blank' rel='noopener noreferrer'>
+      <a
+        className='article__link'
+        href={story.url}
+        target='_blank'
+        rel='noopener noreferrer'
+      >
         <div className='article__number my-number'>{index + 1}.</div>
         <div className='article__title my-title'>{story.title}</div>
         {story.url && (

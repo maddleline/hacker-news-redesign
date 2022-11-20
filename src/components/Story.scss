@@ -1,3 +1,5 @@
+@use 'src/modules.scss';
+
 .article {
   position: relative;
   margin-left: 8.819444444vw; /* 127px at screen width 1440 */
@@ -10,19 +12,29 @@
   }
 
   &__number {
+    @include modules.ubuntu-mono;
     position: absolute;
     top: 0;
     left: -30px;
+    color: rgba(0, 0, 0, 0.5);
   }
 
   &__title {
+    @include modules.ubuntu-mono;
     margin-right: 12px;
   }
 
   &__metadata {
+    @include modules.open-sans;
+    opacity: 0.5;
     display: flex;
     align-items: center;
     margin-top: 10px;
+  }
+
+  &__source {
+    @include modules.open-sans;
+    opacity: 0.5;
   }
 
   &__save {

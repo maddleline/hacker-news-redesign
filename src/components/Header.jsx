@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom'
+import Navigation from './Navigation'
 import './Header.scss'
 
 const Header = () => {
@@ -6,11 +6,7 @@ const Header = () => {
     <div className='header my-header'>
       <div className='square'>Y</div>
       <h1>Hacker News</h1>
-      <nav className='my-nav'>
-        <NavLink to='/'>latest</NavLink>
-        {` | `}
-        <NavLink to='/saved'>saved</NavLink>
-      </nav>
+      <Navigation />
     </div>
   )
 }

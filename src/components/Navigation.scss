@@ -1,0 +1,15 @@
+@use 'src/modules.scss';
+
+.my-nav {
+  @include modules.open-sans-subheader;
+
+  a {
+    text-decoration: none;
+    color: black;
+
+    &.active {
+      color: #fe7139;
+      font-weight: 800;
+    }
+  }
+}

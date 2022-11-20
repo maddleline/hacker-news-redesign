@@ -1,3 +1,5 @@
+@use 'src/modules.scss';
+
 .header {
   display: flex;
   align-items: center;
@@ -8,6 +10,8 @@
   margin-top: 56.77px;
 
   .square {
+    @include modules.open-sans-header;
+    font-weight: 400;
     position: absolute;
     display: flex;
     align-items: center;
@@ -20,6 +24,7 @@
   }
 
   h1 {
+    @include modules.open-sans-header;
     margin-right: 2rem;
   }
 }

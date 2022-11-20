@@ -1,0 +1,39 @@
+@mixin open-sans {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  color: black;
+}
+
+@mixin ubuntu-mono {
+  font-family: 'Ubuntu Mono';
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 0em;
+  color: black;
+}
+
+@mixin open-sans-header {
+  @include open-sans;
+  font-weight: 800;
+  font-size: 19px;
+  line-height: 19px;
+  letter-spacing: 0em;
+}
+
+@mixin open-sans-header-2 {
+  @include open-sans;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+@mixin open-sans-subheader {
+  @include open-sans;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+}
