@@ -1,6 +1,6 @@
 .article {
   position: relative;
-  margin-left: 127px;
+  margin-left: 8.819444444vw; /* 127px at screen width 1440 */
 }
 
 .article a {
