@@ -3,6 +3,8 @@ import { getStory } from '../services/hackerNewsApi'
 import { timeSince } from '../utils/timeSince'
 import { useDispatch, useSelector } from 'react-redux'
 import { addSavedStory, removeSavedStory } from '../store/'
+import starActive from '../icons/star--active.svg'
+import starInactive from '../icons/star--inactive.svg'
 import './Story.scss'
 
 export const Story = memo(({ storyId, index }) => {
@@ -53,6 +55,14 @@ export const Story = memo(({ storyId, index }) => {
     return savedStories.includes(storyId) ? 'saved' : 'save'
   }
 
+  const getStarSource = () => {
+    return savedStories.includes(storyId) ? (
+      <img src={starActive} alt='active star' />
+    ) : (
+      <img src={starInactive} alt='inactive star' />
+    )
+  }
+
   return story ? (
     <div className='article'>
       <a
@@ -66,14 +76,18 @@ export const Story = memo(({ storyId, index }) => {
         {story.url && <div className='article__source'>({getDomain()})</div>}
       </a>
       <div className='article__metadata'>
-        {`${getPointsText()} by ${story.by} posted ${timeSince(story.time)} ago
+        <span>
+          {`${getPointsText()} by ${story.by} posted ${timeSince(
+            story.time
+          )} ago
         | ${getCommentString()} | `}
+        </span>
         <div
           className={`article__save ${getSaveText()}`}
           onClick={() => handleSaveClick()}
         >
-          <span>☆</span>
-          {getSaveText()}
+          {getStarSource()}
+          <span>{getSaveText()}</span>
         </div>
       </div>
     </div>

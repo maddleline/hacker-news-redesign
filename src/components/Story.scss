@@ -26,10 +26,13 @@
 
   &__metadata {
     @include font-styles.open-sans;
-    opacity: 0.5;
     display: flex;
     align-items: center;
     margin-top: 10px;
+
+    span {
+      opacity: 0.5;
+    }
   }
 
   &__source {
@@ -41,15 +44,19 @@
     cursor: pointer;
     display: flex;
     align-items: center;
+    opacity: 1;
 
-    span {
+    img {
       // star
-      opacity: 0.5;
       margin: 0px 3px;
     }
 
-    &:hover span,
-    &.saved span {
+    span {
+      opacity: 0.5;
+    }
+
+    &:hover img,
+    &.saved img {
       // orange when hovered, saved
       color: colors.$active;
     }
