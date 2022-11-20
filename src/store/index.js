@@ -1,5 +1,15 @@
 import { configureStore, createSlice } from '@reduxjs/toolkit'
 
+const darkModeSlice = createSlice({
+  name: 'darkMode',
+  initialState: { darkMode: false },
+  reducers: {
+    toggleDarkMode(state) {
+      state.darkMode = !state.darkMode
+    }
+  }
+})
+
 const savedStoriesSlice = createSlice({
   name: 'savedStory',
   initialState: [],
@@ -16,9 +26,13 @@ const savedStoriesSlice = createSlice({
 
 const store = configureStore({
   reducer: {
-    savedStories: savedStoriesSlice.reducer
+    savedStories: savedStoriesSlice.reducer,
+    darkMode: darkModeSlice.reducer
   }
 })
 
+console.log(store.getState())
+
 export { store }
 export const { addSavedStory, removeSavedStory } = savedStoriesSlice.actions
+export const { toggleDarkMode } = darkModeSlice.actions

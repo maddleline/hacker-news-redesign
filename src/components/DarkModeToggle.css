@@ -1,0 +1,16 @@
+div.toggle {
+  position: absolute;
+  cursor: pointer;
+  z-index: 1;
+  width: 18px;
+  height: 18px;
+  right: 89px;
+  top: 55.42px;
+}
+
+div.toggle.sun {
+}
+
+div.toggle.moon {
+  transform: rotate(-45deg);
+}
