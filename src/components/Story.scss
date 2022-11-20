@@ -1,65 +1,65 @@
 .article {
   position: relative;
   margin-left: 8.819444444vw; /* 127px at screen width 1440 */
-}
 
-.article a {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  margin-top: 26px;
-}
+  a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-top: 26px;
+  }
 
-.article__number {
-  position: absolute;
-  top: 0;
-  left: -30px;
-  font-family: 'Ubuntu Mono';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 18px;
-  color: rgba(0, 0, 0, 0.5);
-}
+  &__number {
+    position: absolute;
+    top: 0;
+    left: -30px;
+    font-family: 'Ubuntu Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 18px;
+    color: rgba(0, 0, 0, 0.5);
+  }
 
-.article__title {
-  font-family: 'Ubuntu Mono';
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 18px;
-  letter-spacing: 0em;
-  color: black;
-  margin-right: 12px;
-}
+  &__title {
+    font-family: 'Ubuntu Mono';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: 0em;
+    color: black;
+    margin-right: 12px;
+  }
 
-.article__source,
-.article__metadata {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 10px;
-  line-height: 14px;
-  color: rgba(0, 0, 0, 0.5);
-}
+  &__source,
+  &__metadata {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    color: rgba(0, 0, 0, 0.5);
+  }
 
-.article__metadata {
-  display: flex;
-  align-items: center;
-  margin-top: 10px;
-}
+  &__metadata {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
 
-.article__save {
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-}
+  &__save {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
 
-.article__save span {
-  color: rgba(0, 0, 0, 0.5);
-  margin: 0px 3px;
-}
+    span {
+      color: rgba(0, 0, 0, 0.5);
+      margin: 0px 3px;
+    }
 
-.article__save:hover span,
-.article__save.saved span {
-  color: #fe7139;
+    &:hover span,
+    &.saved span {
+      color: #fe7139;
+    }
+  }
 }

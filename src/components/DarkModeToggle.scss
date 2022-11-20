@@ -6,11 +6,11 @@ div.toggle {
   height: 18px;
   right: 89px;
   top: 55.42px;
-}
 
-div.toggle.sun {
-}
+  &.sun {
+  }
 
-div.toggle.moon {
-  transform: rotate(-45deg);
+  &.moon {
+    transform: rotate(-45deg);
+  }
 }
