@@ -1,0 +1,51 @@
+.header {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-left: 8.819444444vw; /* 127px at screen width 1440 */
+  margin-bottom: 61px;
+  padding-left: 12px;
+  margin-top: 56.77px;
+  font-family: 'Open Sans';
+}
+
+.header .square {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 33px;
+  height: 33px;
+  left: -39px;
+  font-size: 19px;
+  background: #fe7139;
+  color: white;
+}
+
+.header h1 {
+  margin-right: 2rem;
+  font-weight: 800;
+  font-size: 19px;
+  line-height: 19px;
+  letter-spacing: 0em;
+  color: black;
+}
+
+.header nav {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: black;
+}
+
+.header nav a {
+  text-decoration: none;
+  color: black;
+}
+
+.header nav a.active {
+  color: #fe7139;
+  font-weight: 800;
+}

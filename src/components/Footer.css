@@ -1,0 +1,40 @@
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  padding: 29px 0px;
+  margin: 0 6.25vw; /* 90px at 1440 */
+  border-top: 2px solid #fe7139;
+  margin-top: 53px;
+}
+
+.footer h2 {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  margin-bottom: 12px;
+  color: black;
+}
+
+.footer nav {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: black;
+}
+
+.footer nav a {
+  text-decoration: none;
+  color: black;
+}
+
+.footer nav a.active {
+  color: #fe7139;
+  font-weight: 800;
+}

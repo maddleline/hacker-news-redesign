@@ -1,7 +1,7 @@
 /*
  * timeSince function adapted from Stack Overflow:
  * https://stackoverflow.com/a/3177838/8545523
- * takes in a timestamp and returns a string describing
+ * takes in a unix timestamp and returns a string describing
  * the time since that timestamp using the most appropriate
  * time interval
  */
