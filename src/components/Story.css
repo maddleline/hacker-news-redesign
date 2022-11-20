@@ -1,6 +1,6 @@
 .article {
   position: relative;
-  margin-left: 29px;
+  margin-left: 127px;
 }
 
 .article a {
@@ -28,7 +28,6 @@
   font-size: 18px;
   line-height: 18px;
   letter-spacing: 0em;
-  text-align: left;
   color: black;
   margin-right: 12px;
 }

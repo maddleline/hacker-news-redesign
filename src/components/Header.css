@@ -1,10 +1,32 @@
 .header {
   display: flex;
   align-items: center;
+  position: relative;
+  margin-left: 140px;
+  margin-top: 56.77px;
+  font-family: 'Ubuntu Mono';
+}
+
+.header .square {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 33px;
+  height: 33px;
+  left: -51px;
+  font-size: 18px;
+  background: #fe7139;
+  color: white;
 }
 
 .header h1 {
   margin-right: 2rem;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  letter-spacing: 0em;
+  color: black;
 }
 
 .header nav {
