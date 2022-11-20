@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
+import { STORY_PAGE_SIZE } from '../constants'
 import { getStoryIds } from '../services/hackerNewsApi'
+import ShowMoreButton from '../components/ShowMoreButton'
 import StoriesContainer from '../containers/StoriesContainer'
 
 const Latest = () => {
@@ -14,9 +16,11 @@ const Latest = () => {
     <div className='Latest'>
       <StoriesContainer
         storyIds={storyIds}
-        pageNumber={pageNumber}
-        setPageNumber={setPageNumber}
+        numStories={pageNumber * STORY_PAGE_SIZE}
       />
+      <ShowMoreButton incrementPageNumber={() => setPageNumber(pageNumber + 1)}>
+        show more
+      </ShowMoreButton>
     </div>
   )
 }
