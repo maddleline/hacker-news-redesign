@@ -2,7 +2,7 @@ import { useEffect, useState, memo } from 'react'
 import { getStory } from '../services/hackerNewsApi'
 import { timeSince } from '../utils/timeSince'
 import { useDispatch, useSelector } from 'react-redux'
-import { addStarredStory, removeStarredStory } from '../store/'
+import { addSavedStory, removeSavedStory } from '../store/'
 import './Story.css'
 
 export const Story = memo(({ storyId, index }) => {
@@ -10,24 +10,24 @@ export const Story = memo(({ storyId, index }) => {
 
   const dispatch = useDispatch()
 
-  const starredStories = useSelector((state) => {
-    return state.starredStories
+  const savedStories = useSelector((state) => {
+    return state.savedStories
   })
 
-  const handleStarClick = () => {
-    if (starredStories.includes(storyId)) {
-      handleStarredStoryRemove(storyId)
+  const handleSaveClick = () => {
+    if (savedStories.includes(storyId)) {
+      handleSavedStoryRemove(storyId)
     } else {
-      handleStarredStoryAdd(storyId)
+      handleSavedStoryAdd(storyId)
     }
   }
 
-  const handleStarredStoryAdd = (starredStory) => {
-    dispatch(addStarredStory(starredStory))
+  const handleSavedStoryAdd = (savedStory) => {
+    dispatch(addSavedStory(savedStory))
   }
 
-  const handleStarredStoryRemove = (starredStory) => {
-    dispatch(removeStarredStory(starredStory))
+  const handleSavedStoryRemove = (savedStory) => {
+    dispatch(removeSavedStory(savedStory))
   }
 
   useEffect(() => {
@@ -53,27 +53,28 @@ export const Story = memo(({ storyId, index }) => {
     return string
   }
 
-  const getStarText = () => {
-    return starredStories.includes(storyId) ? 'starred' : 'star'
+  const getSaveText = () => {
+    return savedStories.includes(storyId) ? 'saved' : 'save'
   }
 
   return story ? (
     <div className='article'>
       <a href={story.url} target='_blank' rel='noopener noreferrer'>
-        <span className='article__number'>{index + 1}.</span>
+        <div className='article__number'>{index + 1}.</div>
         <div className='article__title'>{story.title}</div>
-        {story.url && <span className='article__source'>({getDomain()})</span>}
+        {story.url && <div className='article__source'>({getDomain()})</div>}
       </a>
       <div className='article__metadata'>
-        <p>
-          {`284 points by ${story.by} posted ${timeSince(
-            story.time
-          )} ago | ${getCommentString()} | `}
-          <span className='article__star' onClick={() => handleStarClick()}>
-            <div class='five-pointed-star' />
-            {getStarText()}
-          </span>
-        </p>
+        {`284 points by ${story.by} posted ${timeSince(
+          story.time
+        )} ago | ${getCommentString()} | `}
+        <div
+          className={`article__save ${getSaveText()}`}
+          onClick={() => handleSaveClick()}
+        >
+          <span>☆</span>
+          {getSaveText()}
+        </div>
       </div>
     </div>
   ) : null
