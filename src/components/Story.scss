@@ -1,4 +1,4 @@
-@use 'src/modules.scss';
+@use 'src/font-styles.scss';
 
 .article {
   position: relative;
@@ -12,7 +12,7 @@
   }
 
   &__number {
-    @include modules.ubuntu-mono;
+    @include font-styles.ubuntu-mono;
     position: absolute;
     top: 0;
     left: -30px;
@@ -20,12 +20,12 @@
   }
 
   &__title {
-    @include modules.ubuntu-mono;
+    @include font-styles.ubuntu-mono;
     margin-right: 12px;
   }
 
   &__metadata {
-    @include modules.open-sans;
+    @include font-styles.open-sans;
     opacity: 0.5;
     display: flex;
     align-items: center;
@@ -33,7 +33,7 @@
   }
 
   &__source {
-    @include modules.open-sans;
+    @include font-styles.open-sans;
     opacity: 0.5;
   }
 

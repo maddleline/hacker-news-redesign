@@ -1,4 +1,4 @@
-@use 'src/modules.scss';
+@use 'src/font-styles.scss';
 
 .header {
   display: flex;
@@ -10,7 +10,7 @@
   margin-top: 56.77px;
 
   .square {
-    @include modules.open-sans-header;
+    @include font-styles.open-sans-header;
     font-weight: 400;
     position: absolute;
     display: flex;
@@ -24,7 +24,7 @@
   }
 
   h1 {
-    @include modules.open-sans-header;
+    @include font-styles.open-sans-header;
     margin-right: 2rem;
   }
 }

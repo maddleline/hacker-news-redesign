@@ -1,7 +1,7 @@
-@use 'src/modules.scss';
+@use 'src/font-styles.scss';
 
 .my-nav {
-  @include modules.open-sans-subheader;
+  @include font-styles.open-sans-subheader;
 
   a {
     text-decoration: none;

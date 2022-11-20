@@ -1,4 +1,4 @@
-@use 'src/modules.scss';
+@use 'src/font-styles.scss';
 
 .footer {
   display: flex;
@@ -12,7 +12,7 @@
   margin-top: 53px;
 
   h2 {
-    @include modules.open-sans-header-2;
+    @include font-styles.open-sans-header-2;
     margin-bottom: 12px;
   }
 }
