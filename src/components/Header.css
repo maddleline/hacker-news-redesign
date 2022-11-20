@@ -3,9 +3,10 @@
   align-items: center;
   position: relative;
   margin-left: 8.819444444vw; /* 127px at screen width 1440 */
+  margin-bottom: 61px;
   padding-left: 12px;
   margin-top: 56.77px;
-  font-family: 'Ubuntu Mono';
+  font-family: 'Open Sans';
 }
 
 .header .square {
@@ -16,16 +17,16 @@
   width: 33px;
   height: 33px;
   left: -39px;
-  font-size: 18px;
+  font-size: 19px;
   background: #fe7139;
   color: white;
 }
 
 .header h1 {
   margin-right: 2rem;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 18px;
+  font-weight: 800;
+  font-size: 19px;
+  line-height: 19px;
   letter-spacing: 0em;
   color: black;
 }
