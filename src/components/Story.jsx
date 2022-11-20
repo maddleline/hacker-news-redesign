@@ -70,6 +70,7 @@ export const Story = memo(({ storyId, index }) => {
             story.time
           )} ago | ${getCommentString()} | `}
           <span className='article__star' onClick={() => handleStarClick()}>
+            <div class='five-pointed-star' />
             {getStarText()}
           </span>
         </p>
