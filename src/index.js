@@ -4,6 +4,7 @@ import App from './App'
 import { Provider } from 'react-redux'
 import { store } from './store'
 import reportWebVitals from './reportWebVitals'
+import './index.scss'
 
 // fonts
 import '@fontsource/ubuntu-mono/400.css'

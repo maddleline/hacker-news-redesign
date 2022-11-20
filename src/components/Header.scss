@@ -6,7 +6,6 @@
   margin-bottom: 61px;
   padding-left: 12px;
   margin-top: 56.77px;
-  font-family: 'Open Sans';
 
   .square {
     position: absolute;
@@ -16,36 +15,11 @@
     width: 33px;
     height: 33px;
     left: -39px;
-    font-size: 19px;
     background: #fe7139;
     color: white;
   }
 
   h1 {
     margin-right: 2rem;
-    font-weight: 800;
-    font-size: 19px;
-    line-height: 19px;
-    letter-spacing: 0em;
-    color: black;
-  }
-
-  nav {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 19px;
-    color: black;
-
-    a {
-      text-decoration: none;
-      color: black;
-
-      &.active {
-        color: #fe7139;
-        font-weight: 800;
-      }
-    }
   }
 }

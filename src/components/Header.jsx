@@ -3,10 +3,10 @@ import './Header.scss'
 
 const Header = () => {
   return (
-    <div className='header'>
+    <div className='header my-header'>
       <div className='square'>Y</div>
       <h1>Hacker News</h1>
-      <nav>
+      <nav className='my-nav'>
         <NavLink to='/'>latest</NavLink>
         {` | `}
         <NavLink to='/saved'>saved</NavLink>

@@ -56,11 +56,13 @@ export const Story = memo(({ storyId, index }) => {
   return story ? (
     <div className='article'>
       <a href={story.url} target='_blank' rel='noopener noreferrer'>
-        <div className='article__number'>{index + 1}.</div>
-        <div className='article__title'>{story.title}</div>
-        {story.url && <div className='article__source'>({getDomain()})</div>}
+        <div className='article__number my-number'>{index + 1}.</div>
+        <div className='article__title my-title'>{story.title}</div>
+        {story.url && (
+          <div className='article__source my-metadata'>({getDomain()})</div>
+        )}
       </a>
-      <div className='article__metadata'>
+      <div className='article__metadata my-metadata'>
         {`${getPointsText()} by ${story.by} posted ${timeSince(story.time)} ago
         | ${getCommentString()} | `}
         <div
