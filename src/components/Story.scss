@@ -16,7 +16,7 @@
     position: absolute;
     top: 0;
     left: -30px;
-    color: rgba(0, 0, 0, 0.5);
+    opacity: 0.5;
   }
 
   &__title {
@@ -43,12 +43,14 @@
     align-items: center;
 
     span {
-      color: rgba(0, 0, 0, 0.5);
+      // star
+      opacity: 0.5;
       margin: 0px 3px;
     }
 
     &:hover span,
     &.saved span {
+      // orange when hovered, saved
       color: #fe7139;
     }
   }
