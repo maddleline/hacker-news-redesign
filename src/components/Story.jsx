@@ -53,7 +53,7 @@ export const Story = memo(({ storyId, index }) => {
 
   const getPointsText = () => {
     const points = story.score ?? 0
-    return points === 1 ? '1 point' : `${story.points} points`
+    return points === 1 ? '1 point' : `${points} points`
   }
 
   const getSaveText = () => {
