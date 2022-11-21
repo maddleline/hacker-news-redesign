@@ -5,12 +5,12 @@ import ShowMoreButton from '../components/ShowMoreButton'
 import StoriesContainer from '../containers/StoriesContainer'
 
 const Latest = () => {
-  const [storyIds, setStoryIds] = useState([])
+  const [storyIds, setStoryIds] = useState(new Array(500).fill(''))
   const [pageNumber, setPageNumber] = useState(1)
 
   useEffect(() => {
     getStoryIds().then((res) => setStoryIds(res))
-  }, [pageNumber])
+  }, [])
 
   return (
     <div className='Latest'>

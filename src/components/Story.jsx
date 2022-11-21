@@ -6,10 +6,11 @@ import { addSavedStory, removeSavedStory } from '../store/'
 import starActive from '../icons/star--active.svg'
 import starInactive from '../icons/star--inactive.svg'
 import starInactiveDark from '../icons/star--inactive--dark.svg'
+import Skeleton from '@mui/material/Skeleton'
 import './Story.scss'
 
 export const Story = memo(({ storyId, index }) => {
-  const [story, setStory] = useState('')
+  const [story, setStory] = useState(false)
 
   const dispatch = useDispatch()
 
@@ -70,7 +71,7 @@ export const Story = memo(({ storyId, index }) => {
     )
   }
 
-  return story ? (
+  return (
     <div className='article'>
       <a
         className='article__link'
@@ -79,24 +80,42 @@ export const Story = memo(({ storyId, index }) => {
         rel='noopener noreferrer'
       >
         <div className='article__number'>{index + 1}.</div>
-        <div className='article__title'>{story.title}</div>
-        {story.url && <div className='article__source'>({getDomain()})</div>}
+        <div className='article__title'>
+          {story ? (
+            story.title
+          ) : (
+            <Skeleton variant='text' width={600} sx={{ fontSize: '18px' }} />
+          )}
+        </div>
+        <div className='article__source'>
+          {story ? (
+            story.url && getDomain()
+          ) : (
+            <Skeleton variant='text' width={150} sx={{ fontSize: '10px' }} />
+          )}
+        </div>
       </a>
       <div className='article__metadata'>
-        <span>
-          {`${getPointsText()} by ${story.by} posted ${timeSince(
-            story.time
-          )} ago
+        {story ? (
+          <>
+            <span>
+              {`${getPointsText()} by ${story.by} posted ${timeSince(
+                story.time
+              )} ago
         | ${getCommentString()} | `}
-        </span>
-        <div
-          className={`article__save ${getSaveText()}`}
-          onClick={() => handleSaveClick()}
-        >
-          {getStarIcon()}
-          <span>{getSaveText()}</span>
-        </div>
+            </span>
+            <div
+              className={`article__save ${getSaveText()}`}
+              onClick={() => handleSaveClick()}
+            >
+              {getStarIcon()}
+              <span>{getSaveText()}</span>
+            </div>
+          </>
+        ) : (
+          <Skeleton variant='text' width={500} sx={{ fontSize: '10px' }} />
+        )}
       </div>
     </div>
-  ) : null
+  )
 })
