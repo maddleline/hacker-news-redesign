@@ -1,0 +1,19 @@
+@use 'src/styles/font-styles.scss';
+@use 'src/styles/colors.scss';
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  padding: 29px 0px;
+  margin: 0 6.25vw; /* 90px at 1440 */
+  border-top: 2px solid #fe7139;
+  margin-top: 53px;
+
+  h2 {
+    @include font-styles.open-sans-header-2;
+    margin-bottom: 12px;
+  }
+}

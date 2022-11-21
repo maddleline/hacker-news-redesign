@@ -3,7 +3,10 @@ import { getStory } from '../services/hackerNewsApi'
 import { timeSince } from '../utils/timeSince'
 import { useDispatch, useSelector } from 'react-redux'
 import { addSavedStory, removeSavedStory } from '../store/'
-import './Story.css'
+import starActive from '../icons/star--active.svg'
+import starInactive from '../icons/star--inactive.svg'
+import starInactiveDark from '../icons/star--inactive--dark.svg'
+import './Story.scss'
 
 export const Story = memo(({ storyId, index }) => {
   const [story, setStory] = useState('')
@@ -12,6 +15,10 @@ export const Story = memo(({ storyId, index }) => {
 
   const savedStories = useSelector((state) => {
     return state.savedStories
+  })
+
+  const { darkMode } = useSelector((state) => {
+    return state.darkMode
   })
 
   const handleSaveClick = () => {
@@ -53,22 +60,41 @@ export const Story = memo(({ storyId, index }) => {
     return savedStories.includes(storyId) ? 'saved' : 'save'
   }
 
+  const getStarIcon = () => {
+    return savedStories.includes(storyId) ? (
+      <img src={starActive} alt='active star' />
+    ) : darkMode ? (
+      <img src={starInactiveDark} alt='inactive star' />
+    ) : (
+      <img src={starInactive} alt='inactive star' />
+    )
+  }
+
   return story ? (
     <div className='article'>
-      <a href={story.url} target='_blank' rel='noopener noreferrer'>
+      <a
+        className='article__link'
+        href={story.url}
+        target='_blank'
+        rel='noopener noreferrer'
+      >
         <div className='article__number'>{index + 1}.</div>
         <div className='article__title'>{story.title}</div>
         {story.url && <div className='article__source'>({getDomain()})</div>}
       </a>
       <div className='article__metadata'>
-        {`${getPointsText()} by ${story.by} posted ${timeSince(story.time)} ago
+        <span>
+          {`${getPointsText()} by ${story.by} posted ${timeSince(
+            story.time
+          )} ago
         | ${getCommentString()} | `}
+        </span>
         <div
           className={`article__save ${getSaveText()}`}
           onClick={() => handleSaveClick()}
         >
-          <span>☆</span>
-          {getSaveText()}
+          {getStarIcon()}
+          <span>{getSaveText()}</span>
         </div>
       </div>
     </div>

@@ -1,0 +1,31 @@
+@use 'src/styles/font-styles.scss';
+@use 'src/styles/colors.scss';
+
+.header {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-left: 8.819444444vw; /* 127px at screen width 1440 */
+  margin-bottom: 61px;
+  padding-left: 12px;
+  padding-top: 56.77px;
+
+  .square {
+    @include font-styles.open-sans-header;
+    font-weight: 400;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 33px;
+    height: 33px;
+    left: -39px;
+    background: colors.$active;
+    color: white;
+  }
+
+  h1 {
+    @include font-styles.open-sans-header;
+    margin-right: 2rem;
+  }
+}

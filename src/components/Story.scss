@@ -1,0 +1,64 @@
+@use 'src/styles/font-styles.scss';
+@use 'src/styles/colors.scss';
+
+.article {
+  position: relative;
+  margin-left: 8.819444444vw; /* 127px at screen width 1440 */
+
+  a {
+    display: flex;
+    align-items: center;
+    margin-top: 26px;
+  }
+
+  &__number {
+    @include font-styles.ubuntu-mono;
+    position: absolute;
+    top: 0;
+    left: -30px;
+    opacity: 0.5;
+  }
+
+  &__title {
+    @include font-styles.ubuntu-mono;
+    margin-right: 12px;
+  }
+
+  &__metadata {
+    @include font-styles.open-sans;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+
+    span {
+      opacity: 0.5;
+    }
+  }
+
+  &__source {
+    @include font-styles.open-sans;
+    opacity: 0.5;
+  }
+
+  &__save {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    opacity: 1;
+
+    img {
+      // star
+      margin: 0px 3px;
+    }
+
+    span {
+      opacity: 0.5;
+    }
+
+    &:hover img,
+    &.saved img {
+      // orange when hovered, saved
+      color: colors.$active;
+    }
+  }
+}

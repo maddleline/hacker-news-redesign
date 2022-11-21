@@ -1,0 +1,51 @@
+@use 'src/styles/colors.scss';
+body {
+  margin: 0;
+}
+
+// light mode
+.layout.light {
+  background-color: white;
+
+  a {
+    color: black;
+  }
+}
+
+// dark mode
+.layout.dark {
+  background-color: black;
+  a {
+    color: white;
+  }
+
+  .header h1 {
+    color: white;
+  }
+
+  nav {
+    color: white;
+  }
+
+  .article {
+    &__number,
+    &__title,
+    &__source,
+    &__metadata {
+      color: white;
+    }
+  }
+}
+
+.layout {
+  min-height: 100vh;
+
+  a {
+    text-decoration: none;
+
+    &.active {
+      color: colors.$active;
+      font-weight: 800;
+    }
+  }
+}

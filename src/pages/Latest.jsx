@@ -18,9 +18,9 @@ const Latest = () => {
         storyIds={storyIds}
         numStories={pageNumber * STORY_PAGE_SIZE}
       />
-      <ShowMoreButton incrementPageNumber={() => setPageNumber(pageNumber + 1)}>
-        show more
-      </ShowMoreButton>
+      <ShowMoreButton
+        incrementPageNumber={() => setPageNumber(pageNumber + 1)}
+      />
     </div>
   )
 }

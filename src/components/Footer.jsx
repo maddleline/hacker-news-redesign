@@ -1,15 +1,11 @@
-import { NavLink } from 'react-router-dom'
-import './Footer.css'
+import Navigation from './Navigation'
+import './Footer.scss'
 
 const Footer = () => {
   return (
     <div className='footer'>
       <h2>Hacker News</h2>
-      <nav>
-        <NavLink to='/'>latest</NavLink>
-        {` | `}
-        <NavLink to='/saved'>saved</NavLink>
-      </nav>
+      <Navigation />
     </div>
   )
 }
