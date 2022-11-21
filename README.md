@@ -1,6 +1,14 @@
-# Getting Started with Create React App
+# Hacker News Redesign
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A fast and flexible redesign of the Hacker News site, built using React and Redux. Features a live newsfeed, pagination, article saving and an optional dark mode.
+
+- Data fetched from the [Hacker News API](https://github.com/HackerNews/API) using [axios](https://www.npmjs.com/package/axios)
+- Redux configured using the [Redux Toolkit](https://redux-toolkit.js.org/)
+- Routed using [react-router-dom](https://www.npmjs.com/package/react-router-dom)
+- Styled using [Sass](https://sass-lang.com/)
+- Bootstrapped with [Create React App](https://github.com/facebook/create-react-app)
+
+# Create React App Guidance
 
 ## Available Scripts
 
