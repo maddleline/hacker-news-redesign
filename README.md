@@ -8,8 +8,6 @@ A fast and flexible redesign of the Hacker News site, built using React and Redu
 - Styled using [Sass](https://sass-lang.com/)
 - Bootstrapped with [Create React App](https://github.com/facebook/create-react-app)
 
-# Create React App Guidance
-
 ## Available Scripts
 
 In the project directory, you can run:
