@@ -15,36 +15,23 @@ const DarkModeToggle = () => {
     dispatch(toggleDarkMode(true))
   }
 
-  const getIcon = () => {
-    return darkMode ? (
-      <img
-        className='toggle'
-        onClick={handleToggleDarkMode}
-        src={sun}
-        alt='sun icon'
-      />
-    ) : (
-      <img
-        className='toggle'
-        onClick={handleToggleDarkMode}
-        src={moon}
-        alt='moon icon'
-      />
-    )
-  }
-
   return (
     <>
-      {getIcon()}
-      {/* {darkMode ? (
-        <div onClick={handleToggleDarkMode} className='toggle sun'>
-          &#9728;
-        </div>
+      {darkMode ? (
+        <img
+          className='toggle'
+          onClick={handleToggleDarkMode}
+          src={sun}
+          alt='sun icon'
+        />
       ) : (
-        <div onClick={handleToggleDarkMode} className='toggle moon'>
-          &#9790;
-        </div>
-      )} */}
+        <img
+          className='toggle'
+          onClick={handleToggleDarkMode}
+          src={moon}
+          alt='moon icon'
+        />
+      )}
     </>
   )
 }
