@@ -16,12 +16,12 @@ const DarkModeToggle = () => {
   return (
     <>
       {darkMode ? (
-        <div onClick={handleToggleDarkMode} className='toggle moon'>
-          &#9790;
-        </div>
-      ) : (
         <div onClick={handleToggleDarkMode} className='toggle sun'>
           &#9728;
+        </div>
+      ) : (
+        <div onClick={handleToggleDarkMode} className='toggle moon'>
+          &#9790;
         </div>
       )}
     </>

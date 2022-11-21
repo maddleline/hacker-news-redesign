@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { addSavedStory, removeSavedStory } from '../store/'
 import starActive from '../icons/star--active.svg'
 import starInactive from '../icons/star--inactive.svg'
+import starInactiveDark from '../icons/star--inactive--dark.svg'
 import './Story.scss'
 
 export const Story = memo(({ storyId, index }) => {
@@ -14,6 +15,10 @@ export const Story = memo(({ storyId, index }) => {
 
   const savedStories = useSelector((state) => {
     return state.savedStories
+  })
+
+  const { darkMode } = useSelector((state) => {
+    return state.darkMode
   })
 
   const handleSaveClick = () => {
@@ -58,6 +63,8 @@ export const Story = memo(({ storyId, index }) => {
   const getStarSource = () => {
     return savedStories.includes(storyId) ? (
       <img src={starActive} alt='active star' />
+    ) : darkMode ? (
+      <img src={starInactiveDark} alt='inactive star' />
     ) : (
       <img src={starInactive} alt='inactive star' />
     )
