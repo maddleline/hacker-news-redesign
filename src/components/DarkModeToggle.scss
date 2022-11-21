@@ -1,9 +1,14 @@
-img.toggle {
-  position: absolute;
-  cursor: pointer;
+.toggle {
+  display: flex;
+  justify-content: flex-end;
+  position: sticky;
+  top: 88px;
+  margin-right: 90px;
   z-index: 1;
-  width: 18px;
-  height: 18px;
-  right: 90px;
-  top: 70px;
+
+  &__icon {
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+  }
 }
