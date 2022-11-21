@@ -5,10 +5,12 @@
   display: flex;
   align-items: center;
   position: relative;
+  width: fit-content;
   margin-left: 8.819444444vw; /* 127px at screen width 1440 */
   margin-bottom: 61px;
   padding-left: 12px;
   padding-top: 56.77px;
+  z-index: 2;
 
   .square {
     @include font-styles.open-sans-header;
