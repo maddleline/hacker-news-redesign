@@ -60,7 +60,7 @@ export const Story = memo(({ storyId, index }) => {
     return savedStories.includes(storyId) ? 'saved' : 'save'
   }
 
-  const getStarSource = () => {
+  const getStarIcon = () => {
     return savedStories.includes(storyId) ? (
       <img src={starActive} alt='active star' />
     ) : darkMode ? (
@@ -93,7 +93,7 @@ export const Story = memo(({ storyId, index }) => {
           className={`article__save ${getSaveText()}`}
           onClick={() => handleSaveClick()}
         >
-          {getStarSource()}
+          {getStarIcon()}
           <span>{getSaveText()}</span>
         </div>
       </div>
